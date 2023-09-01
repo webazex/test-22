@@ -1,0 +1,85 @@
+/*
+ Theme Name:   Understrap Child
+ Theme URI:    https://understrap.com
+ Description:  Understrap Child Theme
+ Author:       webazex
+ Author URI:   https://github.com/understrap/understrap-child/graphs/contributors
+ Template:     understrap
+ Version:      1.2.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  understrap-child
+*/
+img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+img.rounded {border-radius: 10px;}
+.estates-container__estates {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 540px));
+    justify-content: space-between;
+    grid-row-gap: 20px;
+}
+.estates__estate-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /*padding: 10px;*/
+    box-shadow: 0 0 3px 0 lightgrey;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+a.estates__estate-item:hover {
+    text-decoration: none;
+    box-shadow: 0 0 5px 0 grey;
+    transition: all 0.5s ease-in-out;
+}
+.estate-item__text-container {
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+}
+.estate-item__title, .estate-item__desc {color: initial;}
+.filters__form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.item-formbox {
+    width: auto;
+    padding: 0 10px;
+    margin: 0 5px;
+}
+.estate-article {
+    padding: 50px 0;
+}
+.prop {font-weight: bold;}
+.popups {display: none;}
+.layout {
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    background: #000000e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup {
+    box-shadow: 0 0 5px 0 white;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 4;
+}
+button.close.btn-close-white {cursor: pointer; color: white;}
+.content-popup ul li, .content-popup ol li,
+.content-popup p, .content-popup p span{color: white;}
