@@ -1,7 +1,7 @@
 # test-22
 WP test #22
 
-/wp-admin/
+https://vizual.latul.website/wp-admin/
 
 Viewer
 
