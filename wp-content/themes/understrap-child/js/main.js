@@ -11,7 +11,7 @@ $(document).ready(function (){
     });
     $('.filters__form').submit(function (e){
         e.preventDefault();
-        var data = {
+        let data = {
             action: 'filter-estates',
             datafilter: $(this).serializeArray()
         };
@@ -26,5 +26,24 @@ $(document).ready(function (){
                 alert(textStatus + ' ' + errorThrown);
             }
         });
-    })
+    });
+    $('.btn-reset').click(function (){
+        let thisForm = $(this).closest('form');
+        thisForm.trigger('reset');
+        let data = {
+            action: 'filter-estates',
+            datafilter: {evented: 'reset'}
+        }
+        $.ajax({
+            type: 'POST',
+            url: ajaxpatch.url,
+            data: data,
+            success: function (response) {
+                $('.estates-container__estates').html(response);
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                alert(textStatus + ' ' + errorThrown);
+            }
+        });
+    });
 });

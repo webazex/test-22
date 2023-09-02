@@ -49,7 +49,14 @@ $estates = Estates::getAllEstates();
                         </select>
                     </div>
                     <div class="item-formbox">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">
+                            <?php _e('Шукати', 'understrap-child');?>
+                        </button>
+                    </div>
+                    <div class="item-formbox">
+                        <button type="reset" class="btn btn-primary btn-reset">
+	                        <?php _e('Очистити', 'understrap-child');?>
+                        </button>
                     </div>
 
                 </form>
